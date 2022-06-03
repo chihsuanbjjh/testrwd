@@ -1,0 +1,50 @@
+header {
+    min-height: 70px;
+    background-color: blue;
+    width: 100%;
+}
+
+.container-wrap {
+    width: 100%;
+}
+
+.aside {
+    width: 220px;
+    background-color: red;
+    @media (max-width: 767px) {
+        /* <767px，側邊欄消失 */
+        display: none;
+    }
+}
+
+.container {
+    width: 100%;
+    background-color: green;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.box {
+    width: 100%;
+    border: 1px solid yellow;
+    /* 看清楚用的 */
+    @media (min-width: 768px) {
+        /* >768px，變兩欄*/
+        width: 49%;
+        /* 因為有border，所以不能用50% */
+    }
+    @media (min-width: 992px) {
+        /* >992px，變三欄 */
+        width: 33%;
+    }
+    @media (min-width: 1200px) {
+        /* >992px，變四欄 */
+        width: 24%;
+    }
+}
+
+footer {
+    background-color: purple;
+    width: 100%;
+}
